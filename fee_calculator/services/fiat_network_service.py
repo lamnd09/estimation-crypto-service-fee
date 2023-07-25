@@ -10,10 +10,9 @@ class FiatNetworkService:
             fee = 0  # If the fiat network is not recognized, return 0 fee
         return fee
 
+#Testing
 # Create an instance of the FiatNetworkService
 service = FiatNetworkService()
-
-# Now you can use this service to get fees for a particular fiat network
 fiat_network = 'ach'
 amount = 100.0
 

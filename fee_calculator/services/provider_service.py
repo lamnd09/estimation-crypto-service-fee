@@ -23,16 +23,13 @@ class ProviderService:
         # Return the minimum fee among all providers
         return min(fees)
 
-
+#Testing
 # Create some example providers
 providers = [Provider('Duck', 5), Provider('Goose', 10)]
 
 # Create an instance of the ProviderService
 service = ProviderService(providers)
-
-# Now you can use this service to get fees for a particular amount
 amount = 100.0
-
 fee = service.get_fee(amount)
 
 print(f"The calculated fee for {amount} is {fee}")
