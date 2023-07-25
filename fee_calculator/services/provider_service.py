@@ -25,11 +25,11 @@ class ProviderService:
 
 #Testing
 # Create some example providers
-providers = [Provider('Duck', 5), Provider('Goose', 10)]
+#providers = [Provider('Duck', 5), Provider('Goose', 10)]
 
 # Create an instance of the ProviderService
-service = ProviderService(providers)
-amount = 100.0
-fee = service.get_fee(amount)
+#service = ProviderService(providers)
+#amount = 100.0
+#fee = service.get_fee(amount)
 
-print(f"The calculated fee for {amount} is {fee}")
+#print(f"The calculated fee for {amount} is {fee}")

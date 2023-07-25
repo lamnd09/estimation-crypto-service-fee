@@ -30,17 +30,14 @@ class DiscountCalculator:
         return discounted_fee
 
 # Create a customer
-customer = Customer(2)
-
+#customer = Customer(2)
 # Calculate some example fees
-total_fee = 10.0
-crypto_fee = 3.0
-fiat_fee = 2.0
-
+#total_fee = 10.0
+#crypto_fee = 3.0
+#fiat_fee = 2.0
 # Create an instance of the DiscountCalculator
-calculator = DiscountCalculator()
-
+#calculator = DiscountCalculator()
 # Now you can use this calculator to apply discounts
-discounted_fee = calculator.apply_discounts(customer, total_fee, crypto_fee, fiat_fee)
+#discounted_fee = calculator.apply_discounts(customer, total_fee, crypto_fee, fiat_fee)
 
-print(f"The discounted fee is {discounted_fee}")
+#print(f"The discounted fee is {discounted_fee}")

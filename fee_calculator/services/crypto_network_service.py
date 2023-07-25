@@ -24,9 +24,9 @@ class CryptoNetworkService:
 
 # Testing
 # Create an instance of the CryptoNetworkService
-service = CryptoNetworkService()
-crypto_network = 'ethereum'
-amount = 1.0
-fee = service.get_fee(crypto_network, amount)
+#service = CryptoNetworkService()
+#crypto_network = 'ethereum'
+#amount = 1.0
+#fee = service.get_fee(crypto_network, amount)
 
-print(f"The calculated fee for {amount} {crypto_network} is {fee}")
+#print(f"The calculated fee for {amount} {crypto_network} is {fee}")

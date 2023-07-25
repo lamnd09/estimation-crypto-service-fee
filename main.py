@@ -14,21 +14,20 @@ service = FeeCalculatorService(providers)
 fee = service.calculate_fee(transaction, customer)
 
 # Log the inputs and outputs
-print("Service Input:")
-print("// Transaction")
+print("\n *** Transaction Detail ***")
 print(json.dumps(transaction.__dict__, indent=2))
 
-print("// Customer")
+print("\n *** Customer ***")
 print(json.dumps(customer.__dict__, indent=2))
 
-print("// AvailableProviders")
+print("\n *** AvailableProviders *** ")
 print(json.dumps([provider.__dict__ for provider in providers], indent=2))
 
-print("\nExample Service Output:")
-print("// Fees")
+
+print("\n *** Fees ***")
 output = {
     "Fee": fee,
     "Asset": transaction.fee_asset,
-    "Provider": "Goose"  # You'll need to modify your FeeCalculatorService to return the provider with the lowest fee
+    "Provider": "Goose"  # Note: need to modify your FeeCalculatorService to return the provider with the lowest fee
 }
 print(json.dumps(output, indent=2))

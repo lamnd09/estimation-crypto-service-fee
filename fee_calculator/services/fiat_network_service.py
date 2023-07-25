@@ -18,4 +18,4 @@ amount = 100.0
 
 fee = service.get_fee(fiat_network, amount)
 
-print(f"The calculated fee for {amount} {fiat_network} is {fee}")
+#print(f"The calculated fee for {amount} {fiat_network} is {fee}")
