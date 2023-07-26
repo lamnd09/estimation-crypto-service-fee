@@ -16,7 +16,7 @@ For this project, I separate the structure into multiple modules.
 
 Step 1: Clone this repository.
 
-Update 
+Update .env with your personal etherscan API KEY
 
 Step 2: Install the required Python packages with
 
@@ -43,5 +43,12 @@ tests.py::test_crypto_get_fee PASSED
 tests.py::test_fiat_get_fee PASSED
 tests.py::test_calculate_fee PASSED
 tests.py::test_provider_get_fee PASSED
-tests.py::test_apply_discounts PASSED=================================================== 5 passed in 2.50s ====================================================
+tests.py::test_apply_discounts 
+
+PASSED======================== 5 passed in 2.50s =====================
 ```
+
+
+# References
+
+[1] https://etherscan.io/apis
