@@ -33,3 +33,15 @@ python main.py
 Note: Make sure to replace the placeholders in the code with your actual data and API key.
 
 # Testing
+
+Run the test for the features: 
+
+```
+pytest -s -v tests.py
+
+tests.py::test_crypto_get_fee PASSED
+tests.py::test_fiat_get_fee PASSED
+tests.py::test_calculate_fee PASSED
+tests.py::test_provider_get_fee PASSED
+tests.py::test_apply_discounts PASSED=================================================== 5 passed in 2.50s ====================================================
+```
