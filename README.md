@@ -16,7 +16,7 @@ For this project, I separate the structure into multiple modules.
 
 Step 1: Clone this repository.
 
-Update 
+Update .env with your personal etherscan API KEY
 
 Step 2: Install the required Python packages with
 
