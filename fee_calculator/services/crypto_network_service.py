@@ -1,26 +1,30 @@
-import requests
 import json
+import requests
+from dotenv import load_dotenv
+import os
 
 class CryptoNetworkService:
     def __init__(self):
-        self.etherscan_api = 'https://api.etherscan.io/api?module=proxy&action=eth_gasPrice&apikey=7QV79BZ4RTRC75HU3W5AH9P7CDXR3HUI3Y'
+        load_dotenv()
+        etherscan_apikey = os.getenv('ETHERSCAN_API_KEY')
+        self.etherscan_api = f'https://api.etherscan.io/api?module=proxy&action=eth_gasPrice&apikey={etherscan_apikey}'
 
     def get_fee(self, crypto_network, amount):
         if crypto_network.lower() == 'ethereum':
             fee = self.get_ethereum_fee()
         else:
-            fee = self.get_default_fee()  # Other crypto networks can be added here
+            fee = self.get_default_fee()  # Note: Other crypto networks can be added here
         return fee
 
     def get_ethereum_fee(self):
         response = requests.get(self.etherscan_api)
         data = json.loads(response.text)
-        gas_price = int(data['result'], 16)  # Convert the hex value to integer
+        gas_price = int(data['result'], 16)  # Note: Convert the hex value to integer
         fee = gas_price / (10 ** 9) * 21000  
         return fee
 
     def get_default_fee(self):
-        return 0.005  # A default fee for unsupported crypto networks
+        return 0.005  # Note: A default fee for unsupported crypto networks
 
 # Testing
 # Create an instance of the CryptoNetworkService

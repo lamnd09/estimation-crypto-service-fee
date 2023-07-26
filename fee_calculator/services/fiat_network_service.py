@@ -12,10 +12,9 @@ class FiatNetworkService:
 
 #Testing
 # Create an instance of the FiatNetworkService
-service = FiatNetworkService()
-fiat_network = 'ach'
-amount = 100.0
-
-fee = service.get_fee(fiat_network, amount)
+#service = FiatNetworkService()
+#fiat_network = 'ach'
+#amount = 100.0
+#fee = service.get_fee(fiat_network, amount)
 
 #print(f"The calculated fee for {amount} {fiat_network} is {fee}")

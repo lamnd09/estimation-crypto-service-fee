@@ -14,9 +14,11 @@ class FeeCalculatorService:
     def calculate_fee(self, transaction, customer):
         crypto_fee = self.crypto_service.get_fee(transaction.to_network, transaction.from_amount)
         fiat_fee = self.fiat_service.get_fee(transaction.from_network, transaction.from_amount)
-        provider_fee = self.provider_service.get_fee(transaction.from_amount)
+        
+        provider, provider_fee = self.provider_service.get_lowest_fee(transaction.from_amount)
         
         total_fee = crypto_fee + fiat_fee + provider_fee
         total_fee = self.discount_calculator.apply_discounts(customer, total_fee, crypto_fee, fiat_fee)
         
-        return total_fee
+        return total_fee, provider
+
