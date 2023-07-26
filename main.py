@@ -15,11 +15,12 @@ transactions = [
     Transaction(150, 'Wire', 'USD', 'ethereum', 'ETH', 'USD'),
     Transaction(500, 'ACH', 'USD', 'bitcoin', 'BTC', 'USD')
 ]
-customer = Customer(2)
+customer = Customer(1)
 
 # Create the service and calculate the fee
 service = FeeCalculatorService(providers)
 
+# Results 
 for transaction in transactions:
     fee, provider = service.calculate_fee(transaction, customer)
 
@@ -42,8 +43,7 @@ for transaction in transactions:
     print(json.dumps(output, indent=2))
 
 
-
-
+# Present in table
 # Initialize lists to store details for all transactions
 transaction_details = []
 customer_details = []

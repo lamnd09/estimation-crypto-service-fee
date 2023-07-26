@@ -22,7 +22,7 @@ class ProviderService:
             fees[provider] = fee
 
         # Return the provider with the minimum fee and the fee
-        min_provider = min(fees, key=fees.get)
+        min_provider = min(fees, key=fees.get) # type: ignore
         print(min_provider)
         return min_provider, fees[min_provider]
 
