@@ -8,8 +8,9 @@ For this project, I separate the structure into multiple modules.
 
 * The `services` directory contains the logic for calculating fees and interacting with different services.
 * The `models` directory contains the class definitions for `Customer`, `Transaction`, and `Provider`.
-* The `utils` directory contains utility functions or classes that don't fit into the other categories.
+* The `utils` directory contains utility functions or classes
 * File  `main.py` is the entry point of the application. It instantiates the `FeeCalculatorService` and uses it to calculate fees based on user input or predefined data.
+* The `test` folder for test cases
 * `requirements.txt` lists all the Python packages that the project depends on.
 
 # How to run
@@ -32,8 +33,7 @@ python main.py
 
 Note: Make sure to replace the placeholders in the code with your actual data and API key.
 
-The output could be: 
-
+The output could be:
 
 ```
  *** Transaction Detail ***
@@ -47,7 +47,9 @@ The output could be:
 } *** Customer ***
 {
   "tier": 1
-} *** AvailableProviders ***
+}
+
+*** AvailableProviders ***
 [
   {
     "name": "Duck",
@@ -57,7 +59,8 @@ The output could be:
     "name": "Goose",
     "fee": 1
   }
-] *** Fees ***
+
+*** Fees ***
 {
   "Fee": 2.605,
   "Asset": "USD",
@@ -67,7 +70,6 @@ The output could be:
   }
 }
 ```
-
 
 # Testing
 
