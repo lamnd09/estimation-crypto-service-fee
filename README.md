@@ -24,7 +24,7 @@ Step 2: Install the required Python packages with
 pip install -r requirements.txt
 ```
 
-Step 3: Run the `main.py` script with 
+Step 3: Run the `main.py` script with
 
 ```
 python main.py
@@ -32,9 +32,46 @@ python main.py
 
 Note: Make sure to replace the placeholders in the code with your actual data and API key.
 
+The output could be: 
+
+
+```
+ *** Transaction Detail ***
+{
+  "from_amount": 200,
+  "from_network": "ACH",
+  "from_asset": "USD",
+  "to_network": "bitcoin",
+  "to_asset": "BTC",
+  "fee_asset": "USD"
+} *** Customer ***
+{
+  "tier": 1
+} *** AvailableProviders ***
+[
+  {
+    "name": "Duck",
+    "fee": 5
+  },
+  {
+    "name": "Goose",
+    "fee": 1
+  }
+] *** Fees ***
+{
+  "Fee": 2.605,
+  "Asset": "USD",
+  "Provider": {
+    "name": "Goose",
+    "fee": 1
+  }
+}
+```
+
+
 # Testing
 
-Run the test for the features: 
+Run the test for the features:
 
 ```
 pytest -s -v tests.py
@@ -47,7 +84,6 @@ tests.py::test_apply_discounts
 
 PASSED======================== 5 passed in 2.50s =====================
 ```
-
 
 # References
 

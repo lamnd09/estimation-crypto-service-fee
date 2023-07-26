@@ -1,3 +1,6 @@
+# The `FiatNetworkService` class provides a method `get_fee` that 
+# calculates the fee for a given fiat network and amount.
+
 class FiatNetworkService:
     def get_fee(self, fiat_network, amount):
         if fiat_network.lower() == 'ach':
@@ -16,5 +19,4 @@ class FiatNetworkService:
 #fiat_network = 'ach'
 #amount = 100.0
 #fee = service.get_fee(fiat_network, amount)
-
 #print(f"The calculated fee for {amount} {fiat_network} is {fee}")

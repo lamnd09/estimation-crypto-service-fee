@@ -2,6 +2,7 @@ import json
 import requests
 from dotenv import load_dotenv
 import os
+import json
 
 class CryptoNetworkService:
     def __init__(self):
@@ -19,9 +20,18 @@ class CryptoNetworkService:
     def get_ethereum_fee(self):
         response = requests.get(self.etherscan_api)
         data = json.loads(response.text)
-        gas_price = int(data['result'], 16)  # Note: Convert the hex value to integer
-        fee = gas_price / (10 ** 9) * 21000  
-        return fee
+        gas_price = int(data['result'], 16)  # (wei) Note: Convert the hex value to integer
+        fee_in_eth = gas_price / (10 ** 18)  # Ether
+        #print(fee_in_eth)
+
+        # Fetch the current ETH to USD exchange rate from CoinGecko API
+        response = requests.get('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')        
+        data = response.json()
+        eth_to_usd = data['ethereum']['usd']
+        #print(eth_to_usd)
+        fee_in_usd = fee_in_eth * eth_to_usd # Convert the eth to USD
+
+        return fee_in_usd
 
     def get_default_fee(self):
         return 0.005  # Note: A default fee for unsupported crypto networks
@@ -30,7 +40,6 @@ class CryptoNetworkService:
 # Create an instance of the CryptoNetworkService
 #service = CryptoNetworkService()
 #crypto_network = 'ethereum'
-#amount = 1.0
+#amount = 100
 #fee = service.get_fee(crypto_network, amount)
-
-#print(f"The calculated fee for {amount} {crypto_network} is {fee}")
+#print(f"The estimation fee for {amount} {crypto_network} is {fee}")

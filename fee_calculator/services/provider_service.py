@@ -1,5 +1,3 @@
-import sys
-sys.path.append("..")
 
 from ..models.provider import Provider
 
@@ -25,14 +23,14 @@ class ProviderService:
 
         # Return the provider with the minimum fee and the fee
         min_provider = min(fees, key=fees.get)
+        print(min_provider)
         return min_provider, fees[min_provider]
 
 
 #Testing
 #Create some example providers
-#providers = [Provider('Duck', 5), Provider('Goose', 10)]
-# Create an instance of the ProviderService
+#providers = [Provider('Duck', 5), Provider('Goose', 1)]
 #service = ProviderService(providers)
-#amount = 100.0
-#fee = service.get_fee(amount)
-#print(f"The calculated fee for {amount} is {fee}")
+#mount = 100.0
+#fee = service.get_lowest_fee(amount)
+#print("The calculated fee for", amount," is ", fee)
