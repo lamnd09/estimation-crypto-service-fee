@@ -43,5 +43,12 @@ tests.py::test_crypto_get_fee PASSED
 tests.py::test_fiat_get_fee PASSED
 tests.py::test_calculate_fee PASSED
 tests.py::test_provider_get_fee PASSED
-tests.py::test_apply_discounts PASSED=================================================== 5 passed in 2.50s ====================================================
+tests.py::test_apply_discounts 
+
+PASSED======================== 5 passed in 2.50s =====================
 ```
+
+
+# References
+
+[1] https://etherscan.io/apis
