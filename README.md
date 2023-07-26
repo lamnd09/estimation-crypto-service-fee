@@ -2,7 +2,7 @@
 
 This project provides a fee calculation service for crypto and fiat transactions. The service calculates fees based on the crypto network, fiat payment network, customer tier, and liquidity provider availability.
 
-# Project Structure
+# 1. Project Structure
 
 For this project, I separate the structure into multiple modules.
 
@@ -13,7 +13,7 @@ For this project, I separate the structure into multiple modules.
 * The `test` folder for test cases
 * `requirements.txt` lists all the Python packages that the project depends on.
 
-# How to run
+# 2. How to run
 
 Step 1: Clone this repository.
 
@@ -71,7 +71,7 @@ The output could be:
 }
 ```
 
-# Testing
+# 3. Testing
 
 Run the test for the features:
 
@@ -82,11 +82,13 @@ tests.py::test_crypto_get_fee PASSED
 tests.py::test_fiat_get_fee PASSED
 tests.py::test_calculate_fee PASSED
 tests.py::test_provider_get_fee PASSED
-tests.py::test_apply_discounts 
+tests.py::test_apply_discounts PASSED
 
-PASSED======================== 5 passed in 2.50s =====================
+======================== 5 passed in 2.50s =====================
 ```
 
 # References
 
-[1] https://etherscan.io/apis
+[1] Etherscan API:  https://etherscan.io/apis
+
+[2] Coingecko API: https://www.coingecko.com/en/api/documentation
