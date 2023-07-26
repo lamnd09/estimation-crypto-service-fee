@@ -1,8 +1,8 @@
 {
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.autopep8"
-    },
-    "python.formatting.provider": "none",
-    "python.analysis.typeCheckingMode": "basic",
-    "workbench.colorCustomizations": {}
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "python.formatting.provider": "none",
+  "python.analysis.typeCheckingMode": "basic",
+  "workbench.colorCustomizations": {}
 }
