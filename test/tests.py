@@ -1,4 +1,5 @@
 import pytest
+
 from fee_calculator.services.crypto_network_service import CryptoNetworkService
 from fee_calculator.services.fiat_network_service import FiatNetworkService
 from fee_calculator.services.fee_calculator_service import FeeCalculatorService
